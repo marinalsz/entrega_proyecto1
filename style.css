@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -29,13 +29,19 @@ body {
   color: var(--color);
 }
 
-h1,h2,h3{
-  font-family: var(--font-one);
+h1 {
+  font-weight: 800;
+  font-style: italic;
 }
 
-h1 {
-  font-weight: 900;
+h2,
+h3 {
+  font-family: var(--font-one);
   font-style: italic;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 ul {
@@ -51,10 +57,12 @@ a {
 }
 
 button {
+  background-color: transparent;
+  color: var(--a-color);
+  font-family: var(--font-two);
   height: 40px;
   width: 100px;
   font-weight: bold;
-  border: none;
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
@@ -128,50 +136,54 @@ header {
 /*MAIN*/
 
 main {
-  border: 2px solid red;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-#hero{
-  display: flex;
-  flex-direction: column;
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 video {
-  width: 100%;
-  object-fit: cover;
   position: absolute;
-  top: 100px;
-  left: 0px;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: var(--spacing);
+  padding: var(--spacing);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
 }
 
 /*MERCH*/
 
 #merch {
-  margin: 20px 0;
-}
-
-#merch > h2 {
-  text-align: center;
-  text-transform: lowercase;
+  padding: var(--spacing);
+  border-bottom: 2px solid black;
 }
 
 #merch ul {
-  padding: 20px;
+  padding: var(--spacing);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 360px;
-  gap: 20px;
 }
 
 #merch li {
@@ -179,12 +191,12 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.128);
+  gap: var(--spacing);
 }
 
 #merch img {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  border: 2px solid black;
 }
