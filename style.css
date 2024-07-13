@@ -50,6 +50,10 @@ h2 {
   font-size: 35px;
 }
 
+h3 {
+  font-size: 22px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -200,6 +204,8 @@ video {
 #merch h2 {
   font-size: 60px;
   margin-top: var(--spacing);
+  /*text-shadow: 2px 2px 5px var(--a-color);*/
+  text-shadow: rgb(0, 0, 0) -1px 1px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) -3px 3px, rgb(0, 0, 0) -4px 4px, rgb(0, 0, 0) -5px 5px;
 }
 
 #merch > img {
@@ -225,6 +231,7 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   border: 2px dashed var(--border-color-img);
   background: linear-gradient(to top left, #c5e8ed 0%, #599bb0 100%);
   box-shadow: 5px 10px 8px #888888;
@@ -232,25 +239,27 @@ video {
 
 #merch h3,
 #merch p {
+  text-align: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: var(--a-color);
 }
 
-#merch h3{
-  border: 2px solid coral;
-}
-
-#merch p {
-  text-align: center;
-  border: 2px solid coral;
+#merch a {
+  border-top: 2px dashed var(--border-color-img);
+  border-bottom: 2px dashed var(--border-color-img);
 }
 
 #merch > ul > li > a > img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border: 2px solid coral;
+  transition: 0.5s;
+}
+
+#merch:hover ul > li > a > img:not(:hover) {
+  filter: saturate(0);
+  opacity: 40%;
 }
 
 /*MUSIC*/
