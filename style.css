@@ -81,7 +81,7 @@ h2 {
 }
 
 #merch h2,
-#music h2 {
+#music h2, #duaxpuma h2, #tour h2 {
   font-size: 60px;
   margin-top: var(--spacing);
   text-shadow: rgb(0, 0, 0) -1px 1px, rgb(0, 0, 0) -2px 2px,
