@@ -8,6 +8,7 @@
   --a-color: #000000;
   --border-color-img: #2b4a56;
   --spacing: 20px;
+  --small-spacing: 10px;
   --font-one: "Roboto", sans-serif;
   --font-two: "Kanit", sans-serif;
   --font-three: "Chivo", sans-serif;
@@ -81,7 +82,9 @@ h2 {
 }
 
 #merch h2,
-#music h2, #duaxpuma h2, #tour h2 {
+#music h2,
+#duaxpuma h2,
+#tour h2 {
   font-size: 60px;
   margin-top: var(--spacing);
   text-shadow: rgb(0, 0, 0) -1px 1px, rgb(0, 0, 0) -2px 2px,
@@ -92,7 +95,8 @@ h3 {
   font-size: 22px;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
 }
 
@@ -327,7 +331,7 @@ video {
   align-items: center;
   color: var(--a-color);
   background-color: var(--color);
-  gap: 10px;
+  gap: var(--small-spacing);
   width: 50%;
   height: auto;
 }
@@ -335,4 +339,105 @@ video {
 #music article p {
   text-align: justify-all;
   padding: var(--spacing);
+}
+
+/*TOUR*/
+#duaxpuma {
+  min-height: 300px;
+  border-bottom: 2px solid var(--a-color);
+}
+
+/*TOUR*/
+#tour {
+  min-height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--small-spacing);
+  border-bottom: 2px solid black;
+}
+
+#tour ol{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  gap: var(--spacing);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+#tour li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  gap: var(--small-spacing);
+  padding: var(--spacing);
+  text-align: center;
+}
+
+#tour h3{
+  border-bottom: 2px dashed var(--a-color);
+}
+
+#tour p{
+  text-transform: lowercase;
+  background-color: var(--border-color-img);
+}
+
+#tour p:nth-child(odd){
+  background-color: #000000;
+}
+
+#tour a{
+  border: 2px solid var(--a-color);
+}
+
+#tour a:hover{
+  background-color: var(--color);
+  color: var(--background-color);
+  font-weight: bold;
+  border: none;
+}
+
+/*FOOTER*/
+footer {
+  background-color: var(--color);
+  padding: var(--spacing);
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: var(--small-spacing);
+  flex-wrap: wrap;
+}
+
+footer ul {
+  border: 2px solid coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  width: 35px;
+  height: auto;
+}
+
+footer p {
+  border: 2px solid coral;
+  color: var(--a-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
