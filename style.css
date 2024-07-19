@@ -341,68 +341,142 @@ video {
   padding: var(--spacing);
 }
 
-/*TOUR*/
+#music ul {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 400px;
+  padding: var(--spacing);
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+#music li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px dashed var(--border-color-img);
+  background: linear-gradient(to top left, #c5e8ed 0%, #599bb0 100%);
+  box-shadow: 5px 10px 8px #888888;
+}
+
+#music h3,
+#music p {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  color: var(--a-color);
+}
+
+#music ul > li > p {
+  font-weight: lighter;
+  letter-spacing: 1.5px;
+}
+
+#music > ul > li > a > img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+#music:hover ul > li > a > img:not(:hover) {
+  filter: saturate(0);
+  opacity: 40%;
+}
+
+/*DUA X PUMA*/
+
 #duaxpuma {
   min-height: 300px;
   border-bottom: 2px solid var(--a-color);
 }
 
 /*TOUR*/
+
 #tour {
-  min-height: 150vh;
+  min-height: 200vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--small-spacing);
+  gap: var(--spacing);
   border-bottom: 2px solid black;
 }
 
-#tour ol{
+#tour ol {
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: space-around;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   gap: var(--spacing);
   padding: var(--spacing);
   margin-bottom: var(--spacing);
 }
 
-#tour li{
+#tour li {
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   align-content: center;
   gap: var(--small-spacing);
   padding: var(--spacing);
   text-align: center;
 }
 
-#tour h3{
-  border-bottom: 2px dashed var(--a-color);
+#tour li:nth-child(even) {
+  border: 2px dotted var(--a-color);
 }
 
-#tour p{
+#tour h3 {
+  width: 25%;
+  height: auto;
+}
+
+#tour p {
   text-transform: lowercase;
-  background-color: var(--border-color-img);
+  width: 25%;
+  height: auto;
 }
 
-#tour p:nth-child(odd){
-  background-color: #000000;
+#tour a {
+  width: 25%;
+  height: auto;
 }
 
-#tour a{
-  border: 2px solid var(--a-color);
-}
-
-#tour a:hover{
+#tour a:hover {
   background-color: var(--color);
   color: var(--background-color);
   font-weight: bold;
   border: none;
 }
 
+@media (max-width: 700px) {
+  #tour .top {
+    display: none;
+  }
+
+  #tour li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #fefaee;
+    color: var(--background-color);
+  }
+}
+
 /*FOOTER*/
+
 footer {
   background-color: var(--color);
   padding: var(--spacing);
@@ -410,7 +484,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   gap: var(--small-spacing);
   flex-wrap: wrap;
 }
