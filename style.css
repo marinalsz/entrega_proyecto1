@@ -392,13 +392,13 @@ video {
 /*DUA X PUMA*/
 
 #duaxpuma {
-  min-height: 250vh;
+  min-height: 300vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--small-spacing);
+  gap: var(--spacing);
   border-bottom: 2px solid black;
 }
 
@@ -408,20 +408,21 @@ video {
     background: url("https://www.textures4photoshop.com/tex/thumbs/vintage-sketch-texture-background-thumb33.jpg")
     fixed;
     background: url("https://i.pinimg.com/736x/71/34/44/71344438a793f166699fcecab1e5e850.jpg") fixed;
+    background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg") fixed;
   background-size: cover;
-  height: 300px;
+  height: 280px;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 #duaxpuma h3{
-  font-family: "Lobster", sans-serif;
   font-weight: 400;
   font-size: 35px;
-  color: white;
+  color: pink;
+  text-shadow: 2px 2px green;
 }
 
 #duaxpuma .container > img{
