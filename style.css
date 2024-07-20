@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
   --background-color: #599bb0;
@@ -391,8 +392,50 @@ video {
 /*DUA X PUMA*/
 
 #duaxpuma {
-  min-height: 300px;
-  border-bottom: 2px solid var(--a-color);
+  min-height: 250vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--small-spacing);
+  border-bottom: 2px solid black;
+}
+
+#duaxpuma .container {
+  background: url("https://img.freepik.com/free-photo/fantastic-seascape-with-ripples_1232-424.jpg")
+    fixed;
+    background: url("https://www.textures4photoshop.com/tex/thumbs/vintage-sketch-texture-background-thumb33.jpg")
+    fixed;
+    background: url("https://i.pinimg.com/736x/71/34/44/71344438a793f166699fcecab1e5e850.jpg") fixed;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#duaxpuma h3{
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: white;
+}
+
+#duaxpuma .container > img{
+  height: 150%;
+  width: auto;
+  border-radius: 10px;
+  border: 2px solid var(--border-color-img);
+  background: linear-gradient(to top left, #c5e8ed 0%, #599bb0 100%);
+  box-shadow: 5px 10px 8px #888888;
+  transition: 0.4s;
+}
+
+#duaxpuma .container > img:hover{
+  scale: 1.1;
 }
 
 /*TOUR*/
@@ -470,8 +513,28 @@ video {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    background-color: #fefaee;
+    background-color: #1b1756;
     color: var(--background-color);
+    border-radius: 10px;
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  #tour a {
+    color: var(--color);
+    border: 1px solid var(--color);
   }
 }
 
@@ -485,19 +548,22 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   gap: var(--small-spacing);
   flex-wrap: wrap;
 }
 
 footer ul {
-  border: 2px solid coral;
+  border: 2px solid red;
+  width: fit-content;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--spacing);
 }
 
-footer a:hover {
+footer .information a:hover {
   text-decoration: underline;
 }
 
@@ -506,12 +572,16 @@ footer img {
   height: auto;
 }
 
+footer .social_media > li > a > img:hover {
+  scale: 1.2;
+  filter: drop-shadow(16px 16px 10px black);
+}
+
 footer p {
   border: 2px solid coral;
   color: var(--a-color);
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
