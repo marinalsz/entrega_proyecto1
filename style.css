@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 :root {
   --background-color: #599bb0;
@@ -405,10 +405,12 @@ video {
 #duaxpuma .container {
   background: url("https://img.freepik.com/free-photo/fantastic-seascape-with-ripples_1232-424.jpg")
     fixed;
-    background: url("https://www.textures4photoshop.com/tex/thumbs/vintage-sketch-texture-background-thumb33.jpg")
+  background: url("https://www.textures4photoshop.com/tex/thumbs/vintage-sketch-texture-background-thumb33.jpg")
     fixed;
-    background: url("https://i.pinimg.com/736x/71/34/44/71344438a793f166699fcecab1e5e850.jpg") fixed;
-    background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg") fixed;
+  background: url("https://i.pinimg.com/736x/71/34/44/71344438a793f166699fcecab1e5e850.jpg")
+    fixed;
+  background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg")
+    fixed;
   background-size: cover;
   height: 280px;
   width: 100%;
@@ -418,24 +420,20 @@ video {
   align-items: center;
 }
 
-#duaxpuma h3{
+#duaxpuma h3 {
   font-weight: 400;
   font-size: 35px;
-  color: pink;
-  text-shadow: 2px 2px green;
 }
 
-#duaxpuma .container > img{
+#duaxpuma .container > img {
   height: 150%;
   width: auto;
-  border-radius: 10px;
-  border: 2px solid var(--border-color-img);
-  background: linear-gradient(to top left, #c5e8ed 0%, #599bb0 100%);
-  box-shadow: 5px 10px 8px #888888;
+  border: none;
+  filter: drop-shadow(10px 10px 10px black);
   transition: 0.4s;
 }
 
-#duaxpuma .container > img:hover{
+#duaxpuma .container > img:hover {
   scale: 1.1;
 }
 
