@@ -403,14 +403,8 @@ video {
 }
 
 #duaxpuma .container {
-  background: url("https://img.freepik.com/free-photo/fantastic-seascape-with-ripples_1232-424.jpg")
-    fixed;
-  background: url("https://www.textures4photoshop.com/tex/thumbs/vintage-sketch-texture-background-thumb33.jpg")
-    fixed;
-  background: url("https://i.pinimg.com/736x/71/34/44/71344438a793f166699fcecab1e5e850.jpg")
-    fixed;
-  background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg")
-    fixed;
+  background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg") no-repeat fixed;
+  background: url(https://www.jenniferrenwick.com/images/xl/Holographic.jpg) fixed;
   background-size: cover;
   height: 280px;
   width: 100%;
@@ -421,8 +415,18 @@ video {
 }
 
 #duaxpuma h3 {
-  font-weight: 400;
   font-size: 35px;
+  font-family: var(--font-three);
+}
+
+#duaxpuma h3:nth-child(even) {
+  color: yellowgreen;
+  -webkit-text-stroke: 2px black;
+}
+
+#duaxpuma h3:nth-child(odd) {
+  color: pink;
+  -webkit-text-stroke: 2px black;
 }
 
 #duaxpuma .container > img {
@@ -553,7 +557,6 @@ footer {
 }
 
 footer ul {
-  border: 2px solid red;
   width: fit-content;
   height: auto;
   display: flex;
@@ -577,7 +580,6 @@ footer .social_media > li > a > img:hover {
 }
 
 footer p {
-  border: 2px solid coral;
   color: var(--a-color);
   text-align: center;
   display: flex;
