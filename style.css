@@ -7,13 +7,12 @@
   --color: #fefefe;
   --a-color: #000000;
   --border-color-img: #2b4a56;
+  --highlight-color: #00bfd3;
   --spacing: 20px;
   --small-spacing: 10px;
   --font-one: "Roboto", sans-serif;
   --font-two: "Kanit", sans-serif;
   --font-three: "Chivo", sans-serif;
-  --scrollbarBG: #cfd8dc;
-  --thumbBG: #90a4ae;
 }
 
 * {
@@ -46,7 +45,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00bfd3;
+  background-color: var(--highlight-color);
 }
 
 h1 {
@@ -95,22 +94,20 @@ a {
 
 button {
   background-color: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   color: var(--color);
   font-family: var(--font-two);
   text-transform: lowercase;
   height: 40px;
   width: 140px;
-  border-radius: 5px;
-  border: 2px solid #00bfd3;
-  font-size: 15px;
-  font-weight: 400;
+  border: 2px solid var(--highlight-color);
+  font-size: 16px;
   cursor: pointer;
   transition: 0.5s;
 }
 
 button:hover {
-  background-color: #00bfd3;
+  background-color: var(--color);
   color: var(--a-color);
   border: none;
   font-weight: bolder;
@@ -150,7 +147,7 @@ header {
 .sections a:hover {
   font-weight: bold;
   text-decoration: underline;
-  color: #00bfd3;
+  color: var(--highlight-color);
   transition: 0.5s;
 }
 
@@ -159,35 +156,12 @@ header {
   height: auto;
 }
 
-.icons img:hover{
+.icons img:hover {
   scale: 1.1;
 }
 
 .hidden {
   display: none;
-}
-
-@media (max-width: 700px) {
-  .visible {
-    display: none;
-  }
-
-  .hidden {
-    width: 100%;
-    display: flex;
-  }
-
-  .hidden ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .hidden img {
-    width: 35px;
-    height: auto;
-  }
 }
 
 /*MAIN*/
@@ -204,7 +178,7 @@ main {
   overflow: hidden;
 }
 
-video {
+.video-desktop{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -213,6 +187,10 @@ video {
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.video-mobile{
+  display: none;
 }
 
 .info {
@@ -589,4 +567,50 @@ footer p {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+/*MAQUETACIÓN TABLET*/
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/*MAQUETACIÓN MÓVIL*/
+
+@media only screen and (max-width: 767px) {
+  .visible {
+    display: none;
+  }
+
+  .hidden {
+    width: 100%;
+    display: flex;
+  }
+
+  .hidden ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hidden img {
+    width: 35px;
+    height: auto;
+  }
+
+  .video-desktop{
+    display: none;
+  }
+
+  .video-mobile{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 }
