@@ -76,7 +76,7 @@ h3 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 ul,
@@ -248,22 +248,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: var(--small-spacing);
   border: 2px dashed var(--border-color-img);
   background: linear-gradient(to top left, #c5e8ed 0%, #599bb0 100%);
   box-shadow: 5px 10px 8px #888888;
 }
 
-#merch h3,
 #merch p {
-  text-align: center;
-  width: 100%;
-  height: auto;
   color: var(--a-color);
-}
-
-#merch p {
-  font-weight: lighter;
+  text-align: center;
   letter-spacing: 1.5px;
 }
 
@@ -301,25 +294,16 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 2px solid black;
 }
 
 #music article {
   border: 5px double black;
   padding: var(--spacing);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--a-color);
   background-color: var(--color);
-  gap: var(--small-spacing);
-  width: 50%;
-  height: auto;
 }
 
 #music article p {
-  text-align: justify-all;
+  text-align: justify;
   padding: var(--spacing);
 }
 
