@@ -30,6 +30,7 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
   font-family: var(--font-three);
   color: var(--color);
+  border: 2px solid black;
 }
 
 /*SCROLLBAR*/
@@ -178,7 +179,7 @@ main {
   overflow: hidden;
 }
 
-.video-desktop{
+.video-desktop {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,7 +190,7 @@ main {
   z-index: 1;
 }
 
-.video-mobile{
+.video-mobile {
   display: none;
 }
 
@@ -370,8 +371,6 @@ main {
 #duaxpuma .container {
   background: url("https://mrwallpaper.com/images/hd/blue-water-holographic-background-o8fzwvcxyph40lty.jpg")
     no-repeat fixed;
-  background: url(https://www.jenniferrenwick.com/images/xl/Holographic.jpg)
-    fixed;
   background-size: cover;
   height: 280px;
   width: 100%;
@@ -418,7 +417,6 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing);
-  border-bottom: 2px solid black;
 }
 
 #tour ol {
@@ -521,15 +519,20 @@ footer {
   align-content: center;
   gap: var(--small-spacing);
   flex-wrap: wrap;
+  border-top: 2px solid black;
 }
 
 footer ul {
   width: fit-content;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: var(--spacing);
+  gap: var(--small-spacing);
+}
+
+footer .information a::after {
+  content: " | ";
 }
 
 footer .information a:hover {
@@ -541,26 +544,20 @@ footer img {
   height: auto;
 }
 
-footer .social_media > li > a > img:hover {
+footer .social-media > li > a > img:hover {
   scale: 1.1;
 }
 
 footer p {
   color: var(--a-color);
+  width: 100%;
+  height: auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
 }
 
 /*MAQUETACIÓN TABLET*/
 
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-}
-
-/*MAQUETACIÓN MÓVIL*/
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) and (min-width: 375px) {
   .visible {
     display: none;
   }
@@ -582,11 +579,11 @@ footer p {
     height: auto;
   }
 
-  .video-desktop{
+  .video-desktop {
     display: none;
   }
 
-  .video-mobile{
+  .video-mobile {
     display: block;
     position: absolute;
     top: 50%;
@@ -596,5 +593,13 @@ footer p {
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
   }
 }
