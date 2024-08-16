@@ -469,23 +469,59 @@
           <h3>
             Enter for a chance to win a Radical Optimism vinyl signed by Dua!
           </h3>
-          <form method="get">
-            <input type="text" name="first_name" placeholder="First Name" />
-            <input type="text" name="last_name" placeholder="Last Name" />
-            <input type="text" name="postal_code" placeholder="Postal Code" />
-            <input type="email" name="email" placeholder="Email" />
-            <select name="country">
-              <option value="">Country</option>
-              <option value="france">France</option>
-              <option value="spain">Spain</option>
-              <option value="portugal">Portugal</option>
+          <form
+            action="/"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+            target="_self"
+            accept-charset="UTF-8"
+            autocomplete="off"
+            novalidate
+          >
+            <label for="first_name">First Name:</label>
+            <input
+              type="text"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name"
+              required
+            />
+            <label for="last_name">Last Name:</label>
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+              <option value="">Select a country</option>
+              <optgroup label="Europe">
+                <option value="france">France</option>
+                <option value="portugal">Portugal</option>
+                <option value="spain">Spain</option>
+              </optgroup>
+              <optgroup label="South America">
+                <option value="argentina">Argentina</option>
+                <option value="brazil">Brazil</option>
+                <option value="colombia">Colombia</option>
+              </optgroup>
             </select>
-            <input type="submit" value="Submit" />
+            <button type="submit">Submit</button>
           </form>
         </div>
         <img
-          src="https://eushop.dualipa.com/cdn/shop/files/LP4.gif?v=1713289611&width=493"
-          alt="Radical Optimism clear vinyl"
+          src="https://res.cloudinary.com/darvwfw0u/image/upload/v1723827375/LPBundle_bc0f3365-66bd-453c-a576-9b59bab2b1c5_qgughs.webp"
+          alt="Radical Optimism vinyl"
         />
       </div>
     </section>
