@@ -13,6 +13,7 @@
   --dl-color-eight: #666666;
   --dl-color-nine: #00bfd3;
   --dl-color-ten: #000000;
+  --another: #00a2deff;
   --spacing: 20px;
   --small-spacing: 10px;
   --border-one: 2px solid #232425;
@@ -76,11 +77,10 @@ h3 {
 #contest h2 {
   font-size: 55px;
   margin-top: var(--spacing);
-  text-shadow: 2px 2px 0px var(--dl-color-two),
-    2px -2px 0px var(--dl-color-two), -2px 2px 0px rgba(172, 204, 243),
-    -2px -2px 0px rgba(172, 204, 243), 2px 0px 0px rgba(172, 204, 243),
-    0px 2px 0px rgba(172, 204, 243), -2px 0px 0px rgba(172, 204, 243),
-    0px -2px 0px rgba(172, 204, 243);
+  text-shadow: 2px 2px 0px var(--dl-color-two), 2px -2px 0px var(--dl-color-two),
+    -2px 2px 0px rgba(172, 204, 243), -2px -2px 0px rgba(172, 204, 243),
+    2px 0px 0px rgba(172, 204, 243), 0px 2px 0px rgba(172, 204, 243),
+    -2px 0px 0px rgba(172, 204, 243), 0px -2px 0px rgba(172, 204, 243);
 }
 
 h3 {
@@ -211,20 +211,26 @@ main {
   width: 100%;
   height: auto;
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   z-index: 2;
 }
 
 .info h2 {
-  font-size: 80px;
+  font-size: 75px;
   color: transparent;
   -webkit-text-stroke: 2px var(--dl-color-five);
+}
+
+@media only screen and (max-width: 374px) {
+  .info h2 {
+    font-size: 60px;
+  }
 }
 
 /*MERCH*/
 
 #merch {
-  min-height: 300vh;
+  min-height: 130vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -258,7 +264,11 @@ main {
   align-items: center;
   gap: var(--small-spacing);
   border: var(--border-two);
-  background: linear-gradient(to top left, var(--dl-color-five) 0%, var(--dl-color-one) 100%);
+  background: linear-gradient(
+    to top left,
+    var(--dl-color-five) 0%,
+    var(--dl-color-one) 100%
+  );
   box-shadow: 5px 10px 8px var(--dl-color-eight);
 }
 
@@ -288,7 +298,7 @@ main {
 /*MUSIC*/
 
 #music {
-  min-height: 200vh;
+  min-height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -299,10 +309,10 @@ main {
 }
 
 .gallery {
-  background: url("https://www.patternpictures.com/wp-content/uploads/Intense-blue-ocean-background-water-render-patternpictures-5522-1400x930.jpg");
-  border: 2px solid red;
+  width: 100%;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 
@@ -311,15 +321,19 @@ main {
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
-}
-
-.gallery:hover video:not(:hover) {
-  filter: saturate(0);
-  opacity: 20%;
+  border: var(--border-one);
 }
 
 .gallery > video:nth-child(1) {
-  grid-row: 1/3;
+  grid-row: 1/4;
+}
+
+.gallery > video:nth-child(2) {
+  grid-row: 1/4;
+}
+
+.gallery > video:nth-child(3) {
+  grid-row: 1/4;
 }
 
 .albums {
@@ -334,7 +348,7 @@ main {
 }
 
 .card {
-  background-color: #000000;
+  background-color: var(--dl-color-ten);
   width: fit-content;
   height: 100%;
   display: flex;
@@ -344,9 +358,9 @@ main {
   gap: var(--small-spacing);
   padding: var(--small-spacing);
   border: 2px solid white;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
-    rgba(240, 46, 170, 0.05) 25px 25px;
+  box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
+    rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
+    rgba(0, 162, 222, 0.05) 25px 25px;
   animation: jello-vertical 0.9s both;
 }
 
@@ -404,7 +418,7 @@ main {
 /*TOUR*/
 
 #tour {
-  min-height: 200vh;
+  min-height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -468,7 +482,7 @@ main {
 /*CONTEST*/
 
 #contest {
-  min-height: 100vh;
+  min-height: 50vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -504,9 +518,9 @@ main {
   gap: var(--small-spacing);
   padding: var(--small-spacing);
   border: 2px solid var(--dl-color-five);
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
-    rgba(240, 46, 170, 0.05) 25px 25px;
+  box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
+    rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
+    rgba(0, 162, 222, 0.05) 25px 25px;
 }
 
 form {
@@ -580,9 +594,9 @@ footer p {
   text-align: center;
 }
 
-/*MAQUETACIÓN TABLET*/
+/*MAQUETACIÓN TABLET Y MÓVIL*/
 
-@media only screen and (max-width: 768px) and (min-width: 375px) {
+@media only screen and (max-width: 768px) {
   .visible {
     display: none;
   }
@@ -620,6 +634,21 @@ footer p {
     z-index: 1;
   }
 
+  .gallery > video:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .gallery > video:nth-child(2) {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  .gallery > video:nth-child(3) {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+
   #tour .top {
     display: none;
   }
@@ -630,22 +659,21 @@ footer p {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    background-color: var(--dl-color-ten);
+    background-color: var(--another);
     color: var(--dl-color-five);
     animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    box-shadow: 1px -1px var(--dl-color-two),
-      2px -2px var(--dl-color-two), 3px -3px var(--dl-color-two),
-      4px -4px var(--dl-color-two), 5px -5px var(--dl-color-two),
-      6px -6px var(--dl-color-two), 7px -7px var(--dl-color-two),
-      8px -8px var(--dl-color-two);
+    box-shadow: 1px -1px var(--dl-color-ten), 2px -2px var(--dl-color-ten),
+      3px -3px var(--dl-color-ten), 4px -4px var(--dl-color-ten),
+      5px -5px var(--dl-color-ten), 6px -6px var(--dl-color-ten),
+      7px -7px var(--dl-color-ten), 8px -8px var(--dl-color-ten);
   }
 
   #tour li:nth-child(even) {
-    box-shadow: 1px -1px var(--dl-color-two),
-      2px -2px var(--dl-color-two), 3px -3px var(--dl-color-two),
-      4px -4px var(--dl-color-two), 5px -5px var(--dl-color-two),
-      6px -6px var(--dl-color-two), 7px -7px var(--dl-color-two),
-      8px -8px var(--dl-color-two);
+    border: none;
+    box-shadow: 1px -1px var(--dl-color-ten), 2px -2px var(--dl-color-ten),
+      3px -3px var(--dl-color-ten), 4px -4px var(--dl-color-ten),
+      5px -5px var(--dl-color-ten), 6px -6px var(--dl-color-ten),
+      7px -7px var(--dl-color-ten), 8px -8px var(--dl-color-ten);
   }
 
   @keyframes scale-in-center {
@@ -666,103 +694,10 @@ footer p {
     border: 1px solid var(--dl-color-five);
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .form {
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-  }
-
-  footer .information a::after {
-    display: none;
-  }
-}
-
-/*MAQUETACIÓN MÓVIL*/
-
-@media only screen and (max-width: 375px) {
-  .visible {
-    display: none;
-  }
-
-  .hidden {
-    width: 100%;
-    display: flex;
-  }
-
-  .hidden ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .hidden img {
-    width: 35px;
-    height: auto;
-  }
-
-  .video-desktop {
-    display: none;
-  }
-
-  .video-mobile {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-  }
-
-  #tour .top {
-    display: none;
-  }
-
-  #tour li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    background-color: var(--dl-color-ten);
-    color: var(--dl-color-five);
-    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    box-shadow: 1px -1px var(--dl-color-two),
-      2px -2px var(--dl-color-two), 3px -3px var(--dl-color-two),
-      4px -4px var(--dl-color-two), 5px -5px var(--dl-color-two),
-      6px -6px var(--dl-color-two), 7px -7px var(--dl-color-two),
-      8px -8px var(--dl-color-two);
-  }
-
-  #tour li:nth-child(even) {
-    box-shadow: 1px -1px var(--dl-color-two),
-      2px -2px var(--dl-color-two), 3px -3px var(--dl-color-two),
-      4px -4px var(--dl-color-two), 5px -5px var(--dl-color-two),
-      6px -6px var(--dl-color-two), 7px -7px var(--dl-color-two),
-      8px -8px var(--dl-color-two);
-  }
-
-  @keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  #tour a {
-    color: var(--dl-color-five);
-    border: 1px solid var(--dl-color-five);
   }
 
   footer {
