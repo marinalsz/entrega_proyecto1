@@ -18,6 +18,7 @@
   --small-spacing: 10px;
   --border-one: 2px solid #232425;
   --border-two: 2px dashed #2b4a56;
+  --border-three: 2px solid #ffffff;
   --font-one: "Roboto", sans-serif;
   --font-two: "Kanit", sans-serif;
   --font-three: "Chivo", sans-serif;
@@ -360,7 +361,7 @@ main {
   align-items: center;
   gap: var(--small-spacing);
   padding: var(--small-spacing);
-  border: 2px solid white;
+  border: var(--border-three);
   box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
     rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
     rgba(0, 162, 222, 0.05) 25px 25px;
@@ -409,7 +410,7 @@ main {
 .card img {
   width: 200px;
   height: auto;
-  border: 2px solid white;
+  border: var(--border-three);
 }
 
 @media only screen and (max-width: 895px) {
@@ -520,7 +521,7 @@ main {
   align-items: center;
   gap: var(--small-spacing);
   padding: var(--small-spacing);
-  border: 2px solid var(--dl-color-five);
+  border: var(--border-three);
   box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
     rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
     rgba(0, 162, 222, 0.05) 25px 25px;
