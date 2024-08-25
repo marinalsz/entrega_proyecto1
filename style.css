@@ -496,7 +496,7 @@ main {
   margin-bottom: var(--spacing);
 }
 
-.form {
+.entry {
   width: 100%;
   height: auto;
   display: flex;
@@ -506,7 +506,7 @@ main {
   gap: var(--spacing);
 }
 
-.form img {
+.entry img {
   width: 50%;
   height: auto;
 }
@@ -574,11 +574,11 @@ footer ul {
   gap: var(--small-spacing);
 }
 
-footer .information a::after {
+footer .information-links a::after {
   content: " | ";
 }
 
-footer .information a:hover {
+footer .information-links a:hover {
   text-decoration: underline;
 }
 
@@ -700,7 +700,7 @@ footer p {
     border: 1px solid var(--dl-color-five);
   }
 
-  .form {
+  .entry {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -714,7 +714,7 @@ footer p {
     align-content: center;
   }
 
-  footer .information a::after {
+  footer .information-links a::after {
     display: none;
   }
 }
