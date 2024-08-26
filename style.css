@@ -665,19 +665,19 @@ footer p {
     background-color: var(--dl-color-three);
     color: var(--dl-color-five);
     animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    box-shadow: 1px -1px var(--dl-color-six), 2px -2px var(--dl-color-six),
-      3px -3px var(--dl-color-six), 4px -4px var(--dl-color-six),
-      5px -5px var(--dl-color-six), 6px -6px var(--dl-color-six),
-      7px -7px var(--dl-color-six), 8px -8px var(--dl-color-six);
+    box-shadow: 1px -1px var(--dl-color-seven), 2px -2px var(--dl-color-seven),
+      3px -3px var(--dl-color-seven), 4px -4px var(--dl-color-seven),
+      5px -5px var(--dl-color-seven), 6px -6px var(--dl-color-seven),
+      7px -7px var(--dl-color-seven), 8px -8px var(--dl-color-seven);
     
   }
 
   #tour li:nth-child(even) {
     border: none;
-    box-shadow: 1px -1px var(--dl-color-six), 2px -2px var(--dl-color-six),
-      3px -3px var(--dl-color-six), 4px -4px var(--dl-color-six),
-      5px -5px var(--dl-color-six), 6px -6px var(--dl-color-six),
-      7px -7px var(--dl-color-six), 8px -8px var(--dl-color-six);
+    box-shadow: 1px -1px var(--dl-color-seven), 2px -2px var(--dl-color-seven),
+      3px -3px var(--dl-color-seven), 4px -4px var(--dl-color-seven),
+      5px -5px var(--dl-color-seven), 6px -6px var(--dl-color-seven),
+      7px -7px var(--dl-color-seven), 8px -8px var(--dl-color-seven);
   }
 
   @keyframes scale-in-center {
