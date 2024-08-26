@@ -5,15 +5,11 @@
 :root {
   --dl-color-one: #599bb0;
   --dl-color-two: #2b4a56;
-  --dl-color-three: #232425;
-  --dl-color-four: #222222;
+  --dl-color-three: #000000;
+  --dl-color-four: #00bfd3;
   --dl-color-five: #ffffff;
-  --dl-color-six: #dddddd;
-  --dl-color-seven: #bbbbbb;
-  --dl-color-eight: #666666;
-  --dl-color-nine: #00bfd3;
-  --dl-color-ten: #000000;
-  --another: #00a2deff;
+  --dl-color-six: #00a2deff;
+  --dl-color-seven: #666666;
   --spacing: 20px;
   --small-spacing: 10px;
   --border-one: 2px solid #232425;
@@ -22,6 +18,9 @@
   --font-one: "Roboto", sans-serif;
   --font-two: "Kanit", sans-serif;
   --font-three: "Chivo", sans-serif;
+  --box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
+  rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
+  rgba(0, 162, 222, 0.05) 25px 25px;
 }
 
 * {
@@ -55,7 +54,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--dl-color-nine);
+  background-color: var(--dl-color-four);
 }
 
 h1 {
@@ -97,7 +96,7 @@ a {
   text-decoration: none;
   font-family: var(--font-two);
   font-size: 20px;
-  color: var(--dl-color-ten);
+  color: var(--dl-color-three);
   text-transform: lowercase;
 }
 
@@ -109,7 +108,7 @@ button {
   text-transform: lowercase;
   height: 40px;
   width: 140px;
-  border: 2px solid var(--dl-color-nine);
+  border: 2px solid var(--dl-color-four);
   font-size: 16px;
   cursor: pointer;
   transition: 0.5s;
@@ -117,7 +116,7 @@ button {
 
 button:hover {
   background-color: var(--dl-color-five);
-  color: var(--dl-color-ten);
+  color: var(--dl-color-three);
   border: none;
   font-weight: bolder;
 }
@@ -156,7 +155,7 @@ header {
 .sections a:hover {
   font-weight: bold;
   text-decoration: underline;
-  color: var(--dl-color-nine);
+  color: var(--dl-color-four);
   transition: 0.5s;
 }
 
@@ -270,11 +269,11 @@ main {
     var(--dl-color-five) 0%,
     var(--dl-color-one) 100%
   );
-  box-shadow: 5px 10px 8px var(--dl-color-eight);
+  box-shadow: 5px 10px 8px var(--dl-color-seven);
 }
 
 #merch p {
-  color: var(--dl-color-ten);
+  color: var(--dl-color-three);
   text-align: center;
   letter-spacing: 1.5px;
 }
@@ -352,7 +351,7 @@ main {
 }
 
 .card {
-  background-color: var(--dl-color-ten);
+  background-color: var(--dl-color-three);
   width: fit-content;
   height: 100%;
   display: flex;
@@ -362,9 +361,7 @@ main {
   gap: var(--small-spacing);
   padding: var(--small-spacing);
   border: var(--border-three);
-  box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
-    rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
-    rgba(0, 162, 222, 0.05) 25px 25px;
+  box-shadow: var(--box-shadow);
   animation: jello-vertical 0.9s both;
 }
 
@@ -457,7 +454,7 @@ main {
 }
 
 #tour li:nth-child(even) {
-  border: 2px dotted var(--dl-color-ten);
+  border: 2px dotted var(--dl-color-three);
 }
 
 #tour h3 {
@@ -512,7 +509,7 @@ main {
 }
 
 .form-information {
-  background-color: var(--dl-color-ten);
+  background-color: var(--dl-color-three);
   width: 50%;
   height: auto;
   display: flex;
@@ -522,9 +519,7 @@ main {
   gap: var(--small-spacing);
   padding: var(--small-spacing);
   border: var(--border-three);
-  box-shadow: rgba(0, 162, 222, 0.4) 5px 5px, rgba(0, 162, 222, 0.3) 10px 10px,
-    rgba(0, 162, 222, 0.2) 15px 15px, rgba(0, 162, 222, 0.1) 20px 20px,
-    rgba(0, 162, 222, 0.05) 25px 25px;
+  box-shadow: var(--box-shadow);
 }
 
 form {
@@ -545,7 +540,7 @@ form > select {
 }
 
 form > input[type="submit"] {
-  background-color: var(--dl-color-nine);
+  background-color: var(--dl-color-four);
   color: var(--dl-color-five);
 }
 
@@ -592,7 +587,7 @@ footer .social-media > li > a > img:hover {
 }
 
 footer p {
-  color: var(--dl-color-ten);
+  color: var(--dl-color-three);
   width: 100%;
   height: auto;
   text-align: center;
@@ -648,11 +643,13 @@ footer p {
     grid-column: 1/4;
     grid-row: 2/3;
     border-right: none;
+    border-top: var(--border-one);
   }
 
   .gallery > video:nth-child(3) {
     grid-column: 1/4;
     grid-row: 3/4;
+    border-top: var(--border-one);
   }
 
   #tour .top {
@@ -665,21 +662,22 @@ footer p {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    background-color: var(--another);
+    background-color: var(--dl-color-three);
     color: var(--dl-color-five);
     animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    box-shadow: 1px -1px var(--dl-color-ten), 2px -2px var(--dl-color-ten),
-      3px -3px var(--dl-color-ten), 4px -4px var(--dl-color-ten),
-      5px -5px var(--dl-color-ten), 6px -6px var(--dl-color-ten),
-      7px -7px var(--dl-color-ten), 8px -8px var(--dl-color-ten);
+    box-shadow: 1px -1px var(--dl-color-six), 2px -2px var(--dl-color-six),
+      3px -3px var(--dl-color-six), 4px -4px var(--dl-color-six),
+      5px -5px var(--dl-color-six), 6px -6px var(--dl-color-six),
+      7px -7px var(--dl-color-six), 8px -8px var(--dl-color-six);
+    
   }
 
   #tour li:nth-child(even) {
     border: none;
-    box-shadow: 1px -1px var(--dl-color-ten), 2px -2px var(--dl-color-ten),
-      3px -3px var(--dl-color-ten), 4px -4px var(--dl-color-ten),
-      5px -5px var(--dl-color-ten), 6px -6px var(--dl-color-ten),
-      7px -7px var(--dl-color-ten), 8px -8px var(--dl-color-ten);
+    box-shadow: 1px -1px var(--dl-color-six), 2px -2px var(--dl-color-six),
+      3px -3px var(--dl-color-six), 4px -4px var(--dl-color-six),
+      5px -5px var(--dl-color-six), 6px -6px var(--dl-color-six),
+      7px -7px var(--dl-color-six), 8px -8px var(--dl-color-six);
   }
 
   @keyframes scale-in-center {
